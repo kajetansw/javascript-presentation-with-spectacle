@@ -1,0 +1,8 @@
+links:
+- https://medium.com/@kvosswinkel/is-javascript-synchronous-or-asynchronous-what-the-hell-is-a-promise-7aa9dd8f3bfb
+- https://stackoverflow.com/a/108773
+- https://qr.ae/TWRWcY
+- http://voidcanvas.com/is-javascript-really-interpreted-or-compiled-language/
+- https://www.w3schools.com/js/tryit.asp?filename=tryjs_intro_lightbulb - do czego kiedy� s�u�y� JS
+- https://medium.freecodecamp.org/what-exactly-is-node-js-ae36e97449f5 - analogia NodeJS do JRE
+- 
