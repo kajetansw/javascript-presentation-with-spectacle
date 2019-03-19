@@ -1,0 +1,21 @@
+// object literal
+const kevin = {
+  name: 'Kevin',
+  age: 30
+};
+
+// constructor function
+function Person() {
+  let name = '';
+  let age = undefined;
+
+  this.getName = function() { return name; };
+  this.setName = function(newName) { name = newName; };
+  this.getAge = function() { return age; };
+  this.setAge = function(newAge) { age = newAge; };
+
+  return this;
+}
+
+const john = new Person();  // initialize Person object
+john.setName('Carl');       // john.name -> 'Carl'

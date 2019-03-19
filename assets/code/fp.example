@@ -1,0 +1,16 @@
+// immutability
+let john = {
+  name: 'John',
+  age: 30
+};
+const kevin = {};
+
+kevin = john;                 // mutable
+Object.assign(kevin, john);   // immutable
+kevin = { ...john };          // immutable
+
+// lambdas
+const double = (a) => 2 * a;
+
+// higher order functions
+[1, 2, 3, 4].map(nr => double(nr));

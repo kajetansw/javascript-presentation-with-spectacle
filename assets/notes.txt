@@ -5,4 +5,6 @@ links:
 - http://voidcanvas.com/is-javascript-really-interpreted-or-compiled-language/
 - https://www.w3schools.com/js/tryit.asp?filename=tryjs_intro_lightbulb - do czego kiedy� s�u�y� JS
 - https://medium.freecodecamp.org/what-exactly-is-node-js-ae36e97449f5 - analogia NodeJS do JRE
-- 
+- https://www.htmlgoodies.com/beyond/javascript/class-member-encapsulation-in-javascript-data-hiding.html - encapsulation in JS
+- https://openclassrooms.com/en/courses/3523231-learn-to-code-with-javascript/4379006-use-constructor-functions - constructor functions
+- https://www.tutorialsteacher.com/javascript/new-keyword-in-javascript - "new" keyword in JS
