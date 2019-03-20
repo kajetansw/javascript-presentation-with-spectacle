@@ -7,6 +7,8 @@ import {
   Quote, Slide, Text, Appear, CodePane, CodeSlide, Anim
 } from 'spectacle';
 
+import './fireworks.css';
+
 // Import theme
 import createTheme from 'spectacle/lib/themes/default';
 
@@ -16,12 +18,24 @@ const images = {
   jsOldLogo: require('../assets/js-logo-old.png'),
   jsNewLogo: require('../assets/js-logo-new.png'),
   jsLogo: require('../assets/js-logo.jpg'),
-  busted: require('../assets/busted.png')
+  busted: require('../assets/busted.png'),
+  jqueryLogo: require('../assets/jquery-logo.png'),
+  nodejsLogo: require('../assets/nodejs-logo.png'),
+  jreNodejs: require('../assets/jre-nodejs.png'),
+  npmLogo: require('../assets/npm-logo.png'),
+  programming: require('../assets/programming.gif'),
+  expressLogo: require('../assets/express-logo.png'),
+  nestLogo: require('../assets/nest-logo.png'),
+  angularLogo: require('../assets/angular-logo.png'),
+  reactLogo: require('../assets/react-logo.png'),
+  vueLogo: require('../assets/vue-logo.png')
 };
 
 const code = {
   oop: require("raw-loader!../assets/code/oop.example"),
-  fp: require("raw-loader!../assets/code/fp.example")
+  fp: require("raw-loader!../assets/code/fp.example"),
+  backend: require("raw-loader!../assets/code/backend.example"),
+  frontend: require("raw-loader!../assets/code/frontend.example")
 };
 
 // Require CSS
@@ -29,7 +43,8 @@ require('normalize.css');
 
 const colors = {
   white: 'white',
-  lightblue: '#03A9FC'
+  lightblue: '#03A9FC',
+  pink: '#EB4F80'
 };
 
 const theme = createTheme(
@@ -50,7 +65,7 @@ export default class Presentation extends React.Component {
     return (
       <Deck
         theme={theme}
-        transition={['slide']}
+        transition={['slide', 'spin']}
         transitionDuration={500}
         contentHeight={800}
       >
@@ -61,7 +76,7 @@ export default class Presentation extends React.Component {
             easing={'bounceOut'}
           >
             <div>
-              <Heading lineHeight={1.2} size={3} textColor={colors.white} margin="0 0 2rem 0">
+              <Heading lineHeight={1.2} size={3} textColor={colors.pink} margin="0 0 2rem 0">
                 JavaScript #10YearsChallenge
               </Heading>
             </div>
@@ -96,13 +111,13 @@ export default class Presentation extends React.Component {
           </Heading>
           <List textColor={colors.white}>
             <Appear>
-              <ListItem padding=".5rem">weakly typed</ListItem>
+              <ListItem padding=".5rem">Weakly typed</ListItem>
             </Appear>
             <Appear>
-              <ListItem padding=".5rem">single-threaded</ListItem>
+              <ListItem padding=".5rem">Single-threaded</ListItem>
             </Appear>
             <Appear>
-              <ListItem padding=".5rem">synchronous</ListItem>
+              <ListItem padding=".5rem">Synchronous</ListItem>
             </Appear>
           </List>
         </Slide>
@@ -155,6 +170,150 @@ export default class Presentation extends React.Component {
               <Image src={images.busted} />
             </div>
           </Anim>
+        </Slide>
+
+        <Slide>
+          <Image src={images.jsOldLogo} height={200}/>
+          <Heading
+            size={2}
+            textColor={colors.lightblue}
+            margin="0 0 4rem 0"
+            lineHeight={1.2}
+          >
+            JavaScript (R)evolution
+          </Heading>
+          <Image src={images.jsNewLogo} height={200}/>
+        </Slide>
+
+        <Slide>
+          <Heading margin="0 0 2rem 0">Before 2009</Heading>
+          <Text fit textColor={colors.white} margin="4rem 0">
+            "Controlling the behavior of HTML elements."
+          </Text>
+          <List textColor={colors.white}>
+            <Appear>
+              <ListItem padding=".5rem">Changing HTML content</ListItem>
+            </Appear>
+            <Appear>
+              <ListItem padding=".5rem">Animations</ListItem>
+            </Appear>
+            <Appear>
+              <ListItem padding=".5rem">AJAX</ListItem>
+            </Appear>
+          </List>
+          <Appear>
+            <Image src={images.jqueryLogo} width={250}/>
+          </Appear>
+        </Slide>
+
+        <Slide>
+          <Heading margin="0 0 5rem 0">2009</Heading>
+          <Image src={images.nodejsLogo} width={600}/>
+          <div className="pyro">
+            <div className="before"></div>
+            <div className="after"></div>
+          </div>
+        </Slide>
+
+        <Slide>
+          <Image src={images.nodejsLogo} width={400}/>
+          <Text textColor={colors.white} margin="4rem 0">
+            "Node.js is a JS runtime built on Chrome's V8 JavaScript engine."
+          </Text>
+          <Image src={images.jreNodejs} width={500} />
+        </Slide>
+
+        <Slide>
+          <Image src={images.npmLogo} width={400}/>
+          <Text textColor={colors.white} margin="4rem 0">
+            NodeJS Package Manager
+          </Text>
+          <List textColor={colors.white}>
+            <Appear>
+              <ListItem padding=".5rem">Registry of 800.000 packages (03/2019)</ListItem>
+            </Appear>
+            <Appear>
+              <ListItem padding=".5rem">Available for everyone, for free</ListItem>
+            </Appear>
+            <Appear>
+              <ListItem padding=".5rem">Everyone can contribute</ListItem>
+            </Appear>
+            <Appear>
+              <ListItem padding=".5rem">Ready-to-use solutions</ListItem>
+            </Appear>
+          </List>
+        </Slide>
+
+        <Slide bgImage={images.programming}></Slide>
+
+        <Slide>
+          <Heading
+            size={2} 
+            textColor={colors.pink}
+            margin="0 0 3rem 0"
+          >
+            What is the use for JavaScript today?
+          </Heading>
+        </Slide>
+
+        <Slide>
+          <Heading
+            textColor={colors.lightblue}
+            size={2}
+            margin="0 0 3rem 0"
+          >
+            Back-end
+          </Heading>
+          <Image
+            src={images.expressLogo}
+            display="inline"
+            height={100}
+            margin="0 5rem 3rem 0"
+          />
+          <Image
+            src={images.nestLogo}
+            display="inline"
+            height={100}
+            margin="0 5rem 3rem 0"
+          />
+          <CodePane
+            lang="js"
+            source={code.backend}
+            textSize="1.5rem"
+          />
+        </Slide>
+
+        <Slide>
+          <Heading
+            textColor={colors.lightblue}
+            size={2}
+            margin="0 0 3rem 0"
+          >
+            Front-end
+          </Heading>
+          <Image
+            src={images.angularLogo}
+            display="inline"
+            height={100}
+            margin="0 5rem 3rem 0"
+          />
+          <Image
+            src={images.reactLogo}
+            display="inline"
+            height={100}
+            margin="0 5rem 3rem 0"
+          />
+          <Image
+            src={images.vueLogo}
+            display="inline"
+            height={100}
+            margin="0 0 3rem 0"
+          />
+          <CodePane
+            lang="js"
+            source={code.frontend}
+            textSize="1.5rem"
+          />
         </Slide>
       </Deck>
     );
