@@ -113,7 +113,7 @@ export default class Presentation extends React.Component {
             size={2}
             margin="0 0 3rem 0"
           >
-            OOP?
+            Object Oriented?
           </Heading>
           <CodePane
             lang="js"
@@ -121,10 +121,10 @@ export default class Presentation extends React.Component {
             textSize="1.5rem"
           />
           <Anim
-            transitionDuration={1000}
+            transitionDuration={500}
             fromStyle={{ opacity: 0, transform: 'translate(0px, 0px)' }}
             toStyle={[{ opacity: 1, transform: 'translate(400px, -700px) rotate(-10deg)' }]}
-            easing={'elastic'}
+            easing={'back'}
           >
             <div>
               <Image src={images.busted} />
@@ -138,7 +138,7 @@ export default class Presentation extends React.Component {
             size={2}
             margin="0 0 3rem 0"
           >
-            FP?
+            Functional?
           </Heading>
           <CodePane
             lang="js"
@@ -146,10 +146,10 @@ export default class Presentation extends React.Component {
             textSize="1.5rem"
           />
           <Anim
-            transitionDuration={1000}
+            transitionDuration={500}
             fromStyle={{ opacity: 0, transform: 'translate(0px, 0px)' }}
             toStyle={[{ opacity: 1, transform: 'translate(400px, -550px) rotate(-10deg)' }]}
-            easing={'elastic'}
+            easing={'back'}
           >
             <div>
               <Image src={images.busted} />

@@ -5,12 +5,12 @@ let john = {
 };
 const kevin = {};
 
-kevin = john;                 // mutable
-Object.assign(kevin, john);   // immutable
-kevin = { ...john };          // immutable
+kevin = john;                       // mutable
+kevin = Object.assign({}, john);    // immutable
+kevin = { ...john };                // immutable
 
 // lambdas
 const double = (a) => 2 * a;
 
 // higher order functions
-[1, 2, 3, 4].map(nr => double(nr));
+const arr = [1, 2, 3, 4].map(nr => double(nr));
