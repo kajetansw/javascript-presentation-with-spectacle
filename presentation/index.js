@@ -3,8 +3,8 @@ import React from 'react';
 
 // Import Spectacle Core tags
 import {
-  BlockQuote, Cite, Deck, Heading, Image, List, ListItem, Notes,
-  Quote, Slide, Text, Appear, CodePane, CodeSlide, Anim, ComponentPlayground
+  BlockQuote, Cite, Deck, Heading, Image, List, ListItem, Link,
+  Quote, Slide, Text, Appear, CodePane, Anim
 } from 'spectacle';
 
 import './fireworks.css';
@@ -42,7 +42,10 @@ const images = {
   devpun: require('../assets/devpun.gif'),
   thanos: require('../assets/thanos.png'),
   tc: require('../assets/tc39.png'),
-  ieTroll: require('../assets/ie-troll.png')
+  ieTroll: require('../assets/ie-troll.png'),
+  freecodecamp: require('../assets/freecodecamp.png'),
+  mosh: require('../assets/mosh.png'),
+  academind: require('../assets/academind.png')
 };
 
 const code = {
@@ -178,12 +181,12 @@ export default class Presentation extends React.Component {
           <CodePane
             lang="js"
             source={code.fp}
-            textSize="1.5rem"
+            textSize="1.7rem"
           />
           <Anim
             transitionDuration={500}
             fromStyle={{ opacity: 0, transform: 'translate(0px, 0px)' }}
-            toStyle={[{ opacity: 1, transform: 'translate(400px, -550px) rotate(-10deg)' }]}
+            toStyle={[{ opacity: 1, transform: 'translate(400px, -600px) rotate(-10deg)' }]}
             easing={'back'}
           >
             <div>
@@ -224,6 +227,26 @@ export default class Presentation extends React.Component {
           <Appear>
             <Image src={images.jqueryLogo} width={250}/>
           </Appear>
+        </Slide>
+
+        <Slide>
+          <Heading margin="0 0 4rem 0">Example</Heading>
+          <Link href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_intro_lightbulb" target="_blank">
+            <button style={{
+              background: '#444444',
+              borderRadius: '10px',
+              boxShadow: '15px 15px 40px 0px rgba(0,0,0,0.75)',
+              color: 'white',
+              cursor: 'pointer',
+              fontFamily: 'Montserrat',
+              fontSize: '3rem',
+              fontWeight: 'bold',
+              padding: '1rem'
+            }}
+            >
+              CLICK ME
+            </button>
+          </Link>
         </Slide>
 
         <Slide>
@@ -268,7 +291,7 @@ export default class Presentation extends React.Component {
 
         <Slide>
           <Heading
-            size={2} 
+            size={2}
             textColor={colors.pink}
             margin="0 0 3rem 0"
           >
@@ -470,7 +493,7 @@ export default class Presentation extends React.Component {
           <Heading
             textColor={colors.lightblue}
             size={4}
-            margin="0 0 5rem 0"
+            margin="0 0 3rem 0"
           >
             Ecma International <br/> Technical Committee 39 <br/> ECMAScript
           </Heading>
@@ -523,6 +546,91 @@ export default class Presentation extends React.Component {
               <ListItem padding=".5rem">Community</ListItem>
             </Appear>
           </List>
+        </Slide>
+
+        <Slide>
+          <Heading
+            textColor={colors.lightblue}
+            size={3}
+            margin="0 0 2rem 0"
+          >
+            Where to learn it?
+          </Heading>
+          <Link href="https://learn.freecodecamp.org/" target="_blank">
+            <Image
+              src={images.freecodecamp}
+              display="inline"
+              height={300}
+            />
+          </Link>
+          <Link href="https://www.youtube.com/watch?v=W6NZfCO5SIk&list=PLTjRvDozrdlxEIuOBZkMAK5uiqp8rHUax" target="_blank">
+            <Image
+              src={images.mosh}
+              display="inline"
+              height={300}
+            />
+          </Link>
+          <Link href="https://www.academind.com/learn/javascript/" target="_blank">
+            <Image
+              src={images.academind}
+              display="inline"
+              height={300}
+            />
+          </Link>
+        </Slide>
+
+        <Slide>
+          <Heading>References</Heading>
+          <List>
+            <ListItem>
+              <Link href="http://voidcanvas.com/is-javascript-really-interpreted-or-compiled-language/" target="_blank" textColor={colors.white}>
+                Is JS really interpreted or compiled?
+              </Link>
+            </ListItem>
+            <ListItem>
+              <Link href="https://medium.com/@kvosswinkel/is-javascript-synchronous-or-asynchronous-what-the-hell-is-a-promise-7aa9dd8f3bfb" target="_blank" textColor={colors.white}>
+                Is JS synchronous or asynchronous?
+              </Link>
+            </ListItem>
+            <ListItem>
+              <Link href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects" target="_blank" textColor={colors.white}>
+                Objects in JS
+              </Link>
+            </ListItem>
+            <ListItem>
+              <Link href="https://developer.mozilla.org/pl/docs/Web/JavaScript/Reference/Functions" target="_blank" textColor={colors.white}>
+                Functions in JS
+              </Link>
+            </ListItem>
+            <ListItem>
+              <Link href="https://www.tutorialsteacher.com/javascript/new-keyword-in-javascript" target="_blank" textColor={colors.white}>
+                JavaScript "new" keyword
+              </Link>
+            </ListItem>
+            <ListItem>
+              <Link href="https://medium.freecodecamp.org/what-exactly-is-node-js-ae36e97449f5" target="_blank" textColor={colors.white}>
+                What exactly is NodeJS?
+              </Link>
+            </ListItem>
+            <ListItem>
+              <Link href="https://github.com/tc39" target="_blank" textColor={colors.white}>
+                GitHub repository of TC 39
+              </Link>
+            </ListItem>
+            <ListItem>
+              <Link href="http://kangax.github.io/compat-table/es2016plus/" target="_blank" textColor={colors.white}>
+                ECMAScript browser compatibility table
+              </Link>
+            </ListItem>
+          </List>
+        </Slide>
+
+        <Slide>
+          <CodePane
+            lang="js"
+            source={'console.log("Thank you!");'}
+            textSize="5rem"
+          />
         </Slide>
       </Deck>
     );
