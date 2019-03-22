@@ -1,0 +1,12 @@
+describe('Form Page', () => {
+  beforeEach(() => {
+    cy.visit('http://localhost:8080/actions');
+  });
+
+  it('should submit a form', () => {
+    cy.get('.action-form')
+      .find('.name').type('django');
+    cy.get('.action-form').submit()
+      .next().should('contain', 'Your form has been submitted!');
+  });
+});

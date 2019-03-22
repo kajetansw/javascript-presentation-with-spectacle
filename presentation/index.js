@@ -4,7 +4,7 @@ import React from 'react';
 // Import Spectacle Core tags
 import {
   BlockQuote, Cite, Deck, Heading, Image, List, ListItem, Notes,
-  Quote, Slide, Text, Appear, CodePane, CodeSlide, Anim
+  Quote, Slide, Text, Appear, CodePane, CodeSlide, Anim, ComponentPlayground
 } from 'spectacle';
 
 import './fireworks.css';
@@ -28,14 +28,29 @@ const images = {
   nestLogo: require('../assets/nest-logo.png'),
   angularLogo: require('../assets/angular-logo.png'),
   reactLogo: require('../assets/react-logo.png'),
-  vueLogo: require('../assets/vue-logo.png')
+  vueLogo: require('../assets/vue-logo.png'),
+  cypressLogo: require('../assets/cypress-logo.jpg'),
+  jestLogo: require('../assets/jest-logo.png'),
+  webpackLogo: require('../assets/webpack-logo.png'),
+  gulpLogo: require('../assets/gulp-logo.png'),
+  gruntLogo: require('../assets/grunt-logo.png'),
+  electronLogo: require('../assets/electron-logo.png'),
+  ionicLogo: require('../assets/ionic-logo.png'),
+  tensorflowLogo: require('../assets/tensorflow-logo.png'),
+  brainLogo: require('../assets/brain-logo.png'),
+  bitcoinLogo: require('../assets/bitcoin-logo.png'),
+  devpun: require('../assets/devpun.gif'),
+  thanos: require('../assets/thanos.png'),
+  tc: require('../assets/tc39.png'),
+  ieTroll: require('../assets/ie-troll.png')
 };
 
 const code = {
   oop: require("raw-loader!../assets/code/oop.example"),
   fp: require("raw-loader!../assets/code/fp.example"),
   backend: require("raw-loader!../assets/code/backend.example"),
-  frontend: require("raw-loader!../assets/code/frontend.example")
+  frontend: require("raw-loader!../assets/code/frontend.example"),
+  testing: require("raw-loader!../assets/code/testing.example")
 };
 
 // Require CSS
@@ -71,12 +86,17 @@ export default class Presentation extends React.Component {
       >
         <Slide align="center center">
           <Anim
-            fromStyle={{ opacity: 1, transform: 'translate(0px, 250px)' }}
-            toStyle={[{ opacity: 1, transform: 'translate(0px, 0px)' }]}
+            fromStyle={{ opacity: 1, transform: 'translate(0px, 250px) scale(1)' }}
+            toStyle={[{ opacity: 1, transform: 'translate(0px, 0px) scale(0.8)' }]}
             easing={'bounceOut'}
           >
             <div>
-              <Heading lineHeight={1.2} size={3} textColor={colors.pink} margin="0 0 2rem 0">
+              <Heading
+                lineHeight={1.2}
+                size={2}
+                textColor={colors.pink}
+                margin="0 0 2rem 0"
+              >
                 JavaScript #10YearsChallenge
               </Heading>
             </div>
@@ -314,6 +334,195 @@ export default class Presentation extends React.Component {
             source={code.frontend}
             textSize="1.5rem"
           />
+        </Slide>
+
+        <Slide>
+          <Heading
+            textColor={colors.lightblue}
+            size={2}
+            margin="0 0 3rem 0"
+          >
+            Testing
+          </Heading>
+          <Image
+            src={images.cypressLogo}
+            display="inline"
+            height={100}
+            margin="0 5rem 3rem 0"
+          />
+          <Image
+            src={images.jestLogo}
+            display="inline"
+            height={100}
+            margin="0 5rem 3rem 0"
+          />
+          <CodePane
+            lang="js"
+            source={code.testing}
+            textSize="1.5rem"
+          />
+        </Slide>
+
+        <Slide>
+          <Heading
+            textColor={colors.lightblue}
+            size={2}
+            margin="0 0 3rem 0"
+          >
+            Building tools
+          </Heading>
+          <Image
+            src={images.webpackLogo}
+            display="inline"
+            height={300}
+            margin="0 5rem 3rem 0"
+          />
+          <Image
+            src={images.gulpLogo}
+            display="inline"
+            height={300}
+            margin="0 5rem 3rem 0"
+          />
+          <Image
+            src={images.gruntLogo}
+            display="inline"
+            height={300}
+            margin="0 5rem 3rem 0"
+          />
+        </Slide>
+
+        <Slide>
+          <Heading
+            textColor={colors.lightblue}
+            size={2}
+            margin="0 0 3rem 0"
+          >
+            Desktop and mobile
+          </Heading>
+          <Image
+            src={images.electronLogo}
+            height={200}
+          />
+          <Image
+            src={images.ionicLogo}
+            height={200}
+          />
+        </Slide>
+
+        <Slide>
+          <Heading
+            textColor={colors.lightblue}
+            size={2}
+            margin="0 0 3rem 0"
+          >
+            Machine learning
+          </Heading>
+          <Image
+            src={images.tensorflowLogo}
+            display="inline"
+            margin="0 5rem 0 0"
+            height={200}
+          />
+          <Image
+            src={images.brainLogo}
+            display="inline"
+            height={200}
+          />
+        </Slide>
+
+        <Slide>
+          <Heading
+            textColor={colors.lightblue}
+            size={2}
+            margin="0 0 3rem 0"
+          >
+            Cryptocurrency
+          </Heading>
+          <Image
+            src={images.bitcoinLogo}
+            display="inline"
+            height={300}
+          />
+        </Slide>
+
+        <Slide>
+          <Heading
+            textColor={colors.lightblue}
+            size={2}
+            margin="0 0 3rem 0"
+          >
+            Having fun!
+          </Heading>
+          <Image
+            src={images.devpun}
+            width={1000}
+          />
+          <Appear>
+            <Image
+              src={images.thanos}
+              style={{ position: 'fixed', transform: 'translate(700px, -200px)' }}
+              width={300}
+            />
+          </Appear>
+        </Slide>
+
+        <Slide>
+          <Heading
+            textColor={colors.lightblue}
+            size={4}
+            margin="0 0 5rem 0"
+          >
+            Ecma International <br/> Technical Committee 39 <br/> ECMAScript
+          </Heading>
+          <Image
+            src={images.tc}
+            width={200}
+          />
+          <List textColor={colors.white}>
+            <Appear>
+              <ListItem padding=".5rem">Everyone can submit a proposal</ListItem>
+            </Appear>
+            <Appear>
+              <ListItem padding=".5rem">New ECMAScript standard every year</ListItem>
+            </Appear>
+            <Appear>
+              <ListItem padding=".5rem">Fast progressing browser compatibility</ListItem>
+            </Appear>
+            <Appear>
+              <Image
+                src={images.ieTroll}
+                width={200}
+                style={{ position: 'fixed', transform: 'translate(880px, -100px)' }}
+              />
+            </Appear>
+          </List>
+        </Slide>
+
+        <Slide>
+          <Heading
+            textColor={colors.lightblue}
+            size={4}
+            margin="0 0 5rem 0"
+          >
+            So... Why to choose JavaScript anyway?
+          </Heading>
+          <List textColor={colors.white}>
+            <Appear>
+              <ListItem padding=".5rem">Easy to learn, common syntax</ListItem>
+            </Appear>
+            <Appear>
+              <ListItem padding=".5rem">Many possibilities</ListItem>
+            </Appear>
+            <Appear>
+              <ListItem padding=".5rem">Executable just everywhere</ListItem>
+            </Appear>
+            <Appear>
+              <ListItem padding=".5rem">Growing popularity</ListItem>
+            </Appear>
+            <Appear>
+              <ListItem padding=".5rem">Community</ListItem>
+            </Appear>
+          </List>
         </Slide>
       </Deck>
     );
