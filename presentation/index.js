@@ -50,6 +50,7 @@ const images = {
 
 const code = {
   oop: require("raw-loader!../assets/code/oop.example"),
+  start: require("raw-loader!../assets/code/start.example"),
   fp: require("raw-loader!../assets/code/fp.example"),
   backend: require("raw-loader!../assets/code/backend.example"),
   frontend: require("raw-loader!../assets/code/frontend.example"),
@@ -143,6 +144,21 @@ export default class Presentation extends React.Component {
               <ListItem padding=".5rem">Synchronous</ListItem>
             </Appear>
           </List>
+        </Slide>
+
+        <Slide>
+          <Heading
+            textColor={colors.lightblue}
+            size={2}
+            margin="0 0 3rem 0"
+          >
+            For starters...
+          </Heading>
+          <CodePane
+            lang="js"
+            source={code.start}
+            textSize="1.5rem"
+          />
         </Slide>
 
         <Slide>
@@ -261,7 +277,7 @@ export default class Presentation extends React.Component {
         <Slide>
           <Image src={images.nodejsLogo} width={400}/>
           <Text textColor={colors.white} margin="4rem 0">
-            "Node.js is a JS runtime built on Chrome's V8 JavaScript engine."
+            "Node.js is a JS runtime environment built on Chrome's V8 JavaScript engine."
           </Text>
           <Image src={images.jreNodejs} width={500} />
         </Slide>
@@ -515,7 +531,7 @@ export default class Presentation extends React.Component {
               <Image
                 src={images.ieTroll}
                 width={200}
-                style={{ position: 'fixed', transform: 'translate(880px, -100px)' }}
+                style={{ position: 'fixed', transform: 'translate(650px, -120px)' }}
               />
             </Appear>
           </List>
@@ -603,6 +619,21 @@ export default class Presentation extends React.Component {
               </Link>
             </ListItem>
             <ListItem>
+              <Link href="https://stackoverflow.com/questions/107464/is-javascript-object-oriented/108773#108773" target="_blank" textColor={colors.white}>
+                Is JS object-oriented?
+              </Link>
+            </ListItem>
+            <ListItem>
+              <Link href="https://medium.com/techtrument/multithreading-javascript-46156179cf9a" target="_blank" textColor={colors.white}>
+                Into the Web Workers
+              </Link>
+            </ListItem>
+            <ListItem>
+              <Link href="https://www.digitalocean.com/community/tutorials/understanding-prototypes-and-inheritance-in-javascript" target="_blank" textColor={colors.white}>
+                Understanding Prototypes and Inheritance in JS
+              </Link>
+            </ListItem>
+            <ListItem>
               <Link href="https://www.tutorialsteacher.com/javascript/new-keyword-in-javascript" target="_blank" textColor={colors.white}>
                 JavaScript "new" keyword
               </Link>
@@ -628,7 +659,7 @@ export default class Presentation extends React.Component {
         <Slide>
           <CodePane
             lang="js"
-            source={'console.log("Thank you!");'}
+            source={'console.log(\'Thank you!\');'}
             textSize="5rem"
           />
         </Slide>

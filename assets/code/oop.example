@@ -1,9 +1,3 @@
-// object literal
-const kevin = {
-  name: 'Kevin',
-  age: 30
-};
-
 // constructor function
 function Person() {
   let name = '';
@@ -17,5 +11,6 @@ function Person() {
   return this;
 }
 
-const john = new Person();  // initialize Person object
-john.setName('Carl');       // john.name -> 'Carl'
+const user = new Person();  // initialize Person object
+user.setName('Carl');       // user.name -> 'Carl'
+user.name = 'Kevin';        // still valid...

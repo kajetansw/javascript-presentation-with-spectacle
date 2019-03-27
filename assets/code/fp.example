@@ -13,4 +13,4 @@ kevin = { ...john };                // immutable
 const double = (a) => 2 * a;
 
 // higher order functions
-const arr = [1, 2, 3, 4].map(nr => double(nr));
+const arr = [1, 2, 3, 4].map(nr => double(nr)); // -> [2, 4, 6, 8]

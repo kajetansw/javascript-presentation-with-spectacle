@@ -1,0 +1,17 @@
+// variable
+let email = 'test@test.com';
+email = 30;
+
+// object literal
+const kevin = {
+  name: 'Kevin',
+  age: 30
+};
+
+// array
+const array = [17, true, 'something'];
+
+// function
+function add(a, b) {
+  return a + b;
+}
