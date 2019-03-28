@@ -1,15 +1,15 @@
 @Component({
-  selector: 'app-user-list',
+  selector: 'app-hero-list',
   template: `
     <ul>
-      <li *ngFor="let user of users">{{ user.name }}</li>
+      <li *ngFor="let hero of heroes">{{ hero.name }}</li>
     </ul>
   `
 })
-export class UserListComponent {
-  users: User[] = [
-    { name: 'Vincent Vega' },
-    { name: 'Jules Winnfield' },
-    { name: 'Butch Coolidge' }
+export class HeroListComponent {
+  heroes: Hero[] = [
+    { name: 'Starlord', health: 80 },
+    { name: 'Rocker Racoon', health: 34 },
+    { name: 'Groot', health: 120 }
   ];
 }

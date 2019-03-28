@@ -187,7 +187,7 @@ export default class Presentation extends React.Component {
           <Anim
             transitionDuration={500}
             fromStyle={{ opacity: 0, transform: 'translate(0px, 0px)' }}
-            toStyle={[{ opacity: 1, transform: 'translate(400px, -500px) rotate(-10deg)' }]}
+            toStyle={[{ opacity: 1, transform: 'translate(400px, -550px) rotate(-10deg)' }]}
             easing={'back'}
           >
             <div>
@@ -212,7 +212,7 @@ export default class Presentation extends React.Component {
           <Anim
             transitionDuration={500}
             fromStyle={{ opacity: 0, transform: 'translate(0px, 0px)' }}
-            toStyle={[{ opacity: 1, transform: 'translate(400px, -600px) rotate(-10deg)' }]}
+            toStyle={[{ opacity: 1, transform: 'translate(400px, -750px) rotate(-10deg)' }]}
             easing={'back'}
           >
             <div>

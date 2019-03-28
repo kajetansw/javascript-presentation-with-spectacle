@@ -1,12 +1,14 @@
-describe('Form Page', () => {
+describe('Avengers Enrollment Form', () => {
   beforeEach(() => {
-    cy.visit('http://localhost:8080/actions');
+    cy.visit('http://localhost:8080/avengers/enroll');
   });
 
   it('should submit a form', () => {
-    cy.get('.action-form')
-      .find('.name').type('django');
-    cy.get('.action-form').submit()
-      .next().should('contain', 'Your form has been submitted!');
+    cy.get('.enroll-form')
+      .find('.name')
+      .type('Wade Wilson');
+      .submit()
+      .next()
+      .should('contain', 'Your form has been submitted!');
   });
 });

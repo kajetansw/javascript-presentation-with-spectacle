@@ -1,17 +1,14 @@
-// variable
-let email = 'test@test.com';
-email = 30;
+let powerLevel = 9000;
+powerLevel = '9000';
+powerLevel = true;
 
-// object literal
-const kevin = {
-  name: 'Kevin',
-  age: 30
+const hero = {
+  name: 'Iron Man',
+  power: 'MONEY'
 };
 
-// array
-const array = [17, true, 'something'];
+const totalGarbageArray = [42, true, 'doh!'];
 
-// function
-function add(a, b) {
-  return a + b;
+function levelUp(level) {
+  return level + 1;
 }

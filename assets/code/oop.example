@@ -1,16 +1,15 @@
-// constructor function
-function Person() {
+function Character() {
   let name = '';
-  let age = undefined;
+  let health = 5;
 
   this.getName = function() { return name; };
   this.setName = function(newName) { name = newName; };
-  this.getAge = function() { return age; };
-  this.setAge = function(newAge) { age = newAge; };
+  this.getHealth = function() { return health; };
+  this.setHealth = function(newHealth) { health = newHealth; };
 
   return this;
 }
 
-const user = new Person();  // initialize Person object
-user.setName('Carl');       // user.name -> 'Carl'
-user.name = 'Kevin';        // still valid...
+const spiderMan = new Character('Peter Parker', 0);   // initialize object
+spiderMan.setName('Miles Morales');                   // setting field
+spiderMan.powers = ['WALL CRAWLING'];                 // still valid...

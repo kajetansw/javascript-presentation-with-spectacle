@@ -1,16 +1,20 @@
 // immutability
-let john = {
-  name: 'John',
-  age: 30
+let spiderMan = {
+  name: 'Petar Parker',
+  health: 0
 };
-const kevin = {};
+let spiderManClone = {};
 
-kevin = john;                       // mutable
-kevin = Object.assign({}, john);    // immutable
-kevin = { ...john };                // immutable
+spiderManClone = spiderMan;                       // mutable
+spiderManClone = Object.assign({}, spiderMan);    // immutable
+spiderManClone = { ...spiderMan };                // immutable
 
 // lambdas
-const double = (a) => 2 * a;
+const fullyHeal = (hero) => hero.health = 100;
 
 // higher order functions
-const arr = [1, 2, 3, 4].map(nr => double(nr)); // -> [2, 4, 6, 8]
+const heroes = [
+  { name: 'Iron Man', health: 60 }
+  { name: 'Captain America', health: 88 }
+];
+heroes.forEach(fullyHeal);
