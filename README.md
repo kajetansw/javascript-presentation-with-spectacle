@@ -13,6 +13,10 @@ Main points of the presentation:
 - Regulations of ECMAScript (TC 39),
 - Why should we use JS.
 
+## Quick View
+
+You can see presendation under `./pdf/slides.pdf`. Unfortunately it may be poor in quality and cut on the edges.
+
 ## Reference
 
 The Spectacle core API is available in the [Spectacle Docs](https://github.com/FormidableLabs/spectacle/blob/master/README.md).
