@@ -9,7 +9,7 @@
 export class HeroListComponent {
   heroes: Hero[] = [
     { name: 'Starlord', health: 80 },
-    { name: 'Rocker Racoon', health: 34 },
+    { name: 'Rocket Racoon', health: 34 },
     { name: 'Groot', health: 120 }
   ];
 }

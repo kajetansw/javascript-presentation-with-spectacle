@@ -143,9 +143,11 @@ export default class Presentation extends React.Component {
         </Slide>
 
         <Slide>
-          <Heading textColor={colors.lightblue} size={2} margin="0 0 5rem 0">
-            Weakly typed
-          </Heading>
+          <Appear>
+            <Heading textColor={colors.lightblue} size={2} margin="0 0 5rem 0">
+              Weakly typed
+            </Heading>
+          </Appear>
           <CodePane
             lang="js"
             source={code.weakly}
@@ -219,6 +221,22 @@ export default class Presentation extends React.Component {
               <Image src={images.busted} />
             </div>
           </Anim>
+        </Slide>
+
+        <Slide
+          bgImage="https://images.pexels.com/photos/1068523/pexels-photo-1068523.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260"
+          bgDarken="0.8"
+        >
+          <Heading
+            textColor={colors.lightblue}
+            size={1}
+          >
+            Multi-paradigm language
+          </Heading>
+          <Image
+            src="https://www.onlygfx.com/wp-content/uploads/2016/09/green-approved-stamp-1-1024x772.png"
+            style={{ transform: 'translate(200px, -300px) scale(0.5) rotate(15deg)', position: 'fixed' }}
+          />
         </Slide>
 
         <Slide

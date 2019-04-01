@@ -5,8 +5,8 @@ describe('Avengers Enrollment Form', () => {
 
   it('should submit a form', () => {
     cy.get('.enroll-form')
-      .find('.name')
-      .type('Wade Wilson');
+      .find('.hero-name')
+      .type('Deadpool');
       .submit()
       .next()
       .should('contain', 'Your form has been submitted!');

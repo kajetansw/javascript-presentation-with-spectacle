@@ -1,6 +1,6 @@
 // immutability
 let spiderMan = {
-  name: 'Petar Parker',
+  name: 'Peter Parker',
   health: 0
 };
 let spiderManClone = {};
@@ -14,7 +14,7 @@ const fullyHeal = (hero) => hero.health = 100;
 
 // higher order functions
 const heroes = [
-  { name: 'Iron Man', health: 60 }
+  { name: 'Iron Man', health: 60 },
   { name: 'Captain America', health: 88 }
 ];
 heroes.forEach(fullyHeal);

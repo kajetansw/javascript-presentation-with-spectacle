@@ -1,14 +1,14 @@
-let powerLevel = 9000;
-powerLevel = '9000';
-powerLevel = true;
+let anything = 'doh!';
+anything = 3.14;
+anything = true;
 
-const hero = {
-  name: 'Iron Man',
-  power: 'MONEY'
+anything = {
+    name: 'Tony Stark',
+    isRich: true
 };
 
-const totalGarbageArray = [42, true, 'doh!'];
+anything = ['garbage', true, null];
 
-function levelUp(level) {
-  return level + 1;
+anything = function(arg) {
+    return arg;
 }
