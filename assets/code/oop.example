@@ -1,11 +1,11 @@
-function Character() {
-  let name = '';
-  let health = 5;
+function Character(name, health) {
+  let _name = name;
+  let _health = health;
 
-  this.getName = function() { return name; };
-  this.setName = function(newName) { name = newName; };
-  this.getHealth = function() { return health; };
-  this.setHealth = function(newHealth) { health = newHealth; };
+  this.getName = function() { return _name; };
+  this.setName = function(newName) { _name = newName; };
+  this.getHealth = function() { return _health; };
+  this.setHealth = function(newHealth) { _health = newHealth; };
 
   return this;
 }
