@@ -540,38 +540,6 @@ export default class Presentation extends React.Component {
           </Appear>
         </Slide>
 
-        <Slide>
-          <Heading
-            textColor={colors.lightblue}
-            size={4}
-            margin="0 0 3rem 0"
-          >
-            Ecma International <br/> Technical Committee 39 <br/> ECMAScript
-          </Heading>
-          <Image
-            src={images.tc}
-            width={200}
-          />
-          <List textColor={colors.white}>
-            <Appear>
-              <ListItem padding=".5rem">Everyone can submit a proposal</ListItem>
-            </Appear>
-            <Appear>
-              <ListItem padding=".5rem">New ECMAScript standard every year</ListItem>
-            </Appear>
-            <Appear>
-              <ListItem padding=".5rem">Fast progressing browser compatibility</ListItem>
-            </Appear>
-            <Appear>
-              <Image
-                src={images.ieTroll}
-                width={200}
-                style={{ position: 'fixed', transform: 'translate(650px, -120px)' }}
-              />
-            </Appear>
-          </List>
-        </Slide>
-
         <Slide bgImage="https://images.pexels.com/photos/356079/pexels-photo-356079.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" bgDarken="0.8">
           <Heading
             textColor={colors.lightblue}
