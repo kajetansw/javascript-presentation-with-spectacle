@@ -23,7 +23,6 @@ const images = {
   nodejsLogo: require('../assets/images/nodejs-logo.png'),
   jreNodejs: require('../assets/images/jre-nodejs.png'),
   npmLogo: require('../assets/images/npm-logo.png'),
-  programming: require('../assets/images/programming.gif'),
   expressLogo: require('../assets/images/express-logo.png'),
   nestLogo: require('../assets/images/nest-logo.png'),
   angularLogo: require('../assets/images/angular-logo.png'),
@@ -334,11 +333,11 @@ export default class Presentation extends React.Component {
           </List>
         </Slide>
 
-        <Slide bgImage={images.programming}></Slide>
+        <Slide bgImage="https://media1.tenor.com/images/788b9a2a6bab5d3b739c8439c003b2ea/tenor.gif?itemid=10140422"></Slide>
 
         <Slide
           bgImage="https://images.unsplash.com/reserve/oIpwxeeSPy1cnwYpqJ1w_Dufer%20Collateral%20test.jpg?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1216&q=80"
-          bgDarken="0.6"
+          bgDarken="0.5"
         >
           <Heading
             size={1}
