@@ -1,4 +1,4 @@
-# JavaScript #10YearsChallenge Presentation (with Spectacle)
+# JavaScript #10YearsChallenge Presentation (with Spectacle) &copy;
 
 Slides I made about for presentation about how JavaScript evolved 
 as a language and technologies surrounding JS. 
